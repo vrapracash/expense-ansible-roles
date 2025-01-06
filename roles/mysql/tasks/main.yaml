@@ -1,4 +1,4 @@
-- name: ansible to install PyMySQL
+- name: ansible to install pymysql 
   ansible.builtin.pip:
     name: 
     - PyMySQL
