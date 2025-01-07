@@ -21,7 +21,7 @@
   - deployment
   ansible.builtin.import_role:
     name: common
-    tasks_from: app-pre-reg
+    tasks_from: app-pre-req
 
 - name: Install dependencies
   tags:
