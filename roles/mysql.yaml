@@ -1,7 +1,7 @@
 - name: configure mysql server 
   hosts: mysql 
   become: yes 
-  vars: 
+  roles:
   - mysql
   # vars_files: 
   # - /vars/expense/credentials_mysql.yaml # ansible server
