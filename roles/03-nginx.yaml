@@ -1,17 +1,16 @@
 - name: nginx install and run
   #hosts: nginx
   hosts: all
-  become: yes
-  #serial: 3
-
+  become: yes #take sudo access
+  serial: 3
   tasks:
-  - name: Install nginx
-    ansible.builtin.package:
+  - name: install nginx
+    ansible.builtin.package: #heterongenous module that can work for all distros
       name: nginx
       state: present
-
-  - name: Start nginx
+  
+  - name: run nginx
     ansible.builtin.service:
       name: nginx
-      start: started
+      state: started
       enabled: yes
